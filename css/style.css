@@ -1,0 +1,2072 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff4500;
+    border-radius: 150px;
+}
+/* Header Section Start */
+
+
+.wrapper {
+    background: #f8f6f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.wrapper nav {
+    position: relative;
+    display: flex;
+    max-width: calc(100% - 200px);
+    margin: 0 auto;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .content {
+    display: flex;
+    align-items: center;
+}
+
+nav .content .links {
+    margin-left: 80px;
+    display: flex;
+    z-index: 1;
+}
+
+.wrapper .logo a {
+    color: #000;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Kaushan Script', cursive;
+    text-decoration: none;
+}
+
+.content .links li {
+    list-style: none;
+    line-height: 70px;
+}
+
+.content .links li a,
+.content .links li label {
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 9px 17px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.content .links li a.active,
+.content .links li label.active {
+    color: #ff4500;
+}
+
+.content .links li label {
+    display: none;
+}
+
+.content .links li a:hover,
+.content .links li label:hover {
+    color: #ff4500;
+}
+
+.wrapper .search-icon,
+.wrapper .menu-icon {
+    color: #000;
+    font-size: 18px;
+    cursor: pointer;
+    line-height: 70px;
+    width: 70px;
+    text-align: center;
+    position: relative;
+    top: -3px;
+}
+
+.wrapper .menu-icon {
+    display: none;
+}
+
+.wrapper #show-search:checked~.search-icon i::before {
+    content: "\f00d";
+}
+
+.wrapper .search-box {
+    position: absolute;
+    height: 100%;
+    max-width: calc(100% - 50px);
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.wrapper #show-search:checked~.search-box {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.search-box input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    color: #000;
+    background: #f8f6f3;
+    padding: 0 100px 0 15px;
+    position: relative;
+    top: -5px;
+    z-index: 1;
+}
+
+.search-box input::placeholder {
+    color: #000;
+}
+
+.search-box .go-icon {
+    position: absolute;
+    right: 10px;
+    top: 40%;
+    transform: translateY(-50%);
+    line-height: 60px;
+    width: 70px;
+    background: #f8f6f3;
+    border: none;
+    outline: none;
+    color: #000;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.wrapper input[type="checkbox"] {
+    display: none;
+}
+
+/* Dropdown Menu code start */
+.content .links ul {
+    position: absolute;
+    background: #f8f6f3;
+    top: 80px;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.content .links li:hover>ul {
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
+}
+
+.content .links ul li a {
+    display: block;
+    width: 100%;
+    line-height: 30px;
+    border-radius: 0px !important;
+}
+
+.content .links ul ul {
+    position: absolute;
+    top: 0;
+    right: calc(-100% + 8px);
+}
+
+.content .links ul li {
+    position: relative;
+}
+
+.content .links ul li:hover ul {
+    top: 0;
+}
+
+
+
+/* Header Section End */
+
+
+/* Home Section Start */
+
+.home {
+    background-color: #ebe4e4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content {
+    background: url(../images/wedding\ 3.png) no-repeat;
+    background-position: right;
+    height: 613px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+}
+
+.content {
+    padding: 10px;
+}
+
+.content h4 {
+    font-size: 40px;
+}
+
+.content h1 {
+    font-size: 130px;
+}
+
+.img img {
+    height: 400px;
+}
+
+/* Home Section End */
+
+
+/* Service Section Start */
+
+.service {
+    background-color: #f8f6f3;
+}
+
+.secondary-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    flex-direction: column;
+}
+
+.secondary-heading img {
+    position: relative;
+    top: -50px;
+    height: 200px;
+    animation-name: rotating;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotating {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+
+.service {
+    height: 840px;
+}
+
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 40px 0;
+}
+
+.heading:before {
+    content: "";
+    background-color: #ff4500;
+    height: 4px;
+    width: 20px;
+    position: relative;
+    left: -175px;
+    top: 82px;
+}
+
+.heading h3 {
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.heading h2 {
+    font-weight: bold;
+    font-size: 40px;
+    color: orangered;
+}
+
+.service-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.service .box {
+    height: 400px;
+    margin: 5px 4px;
+    padding: 3.5rem;
+    background: #fff;
+    border-radius: .5rem;
+    border: .1rem solid rgba(0, 0, 0, .2);
+    box-shadow: var(--box-shadow);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.service .box .fa-heart,
+.service .box .fa-eye {
+    position: absolute;
+    top: 1.5rem;
+    background: #eee;
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    line-height: 2rem;
+    font-size: 1rem;
+    color: orangered;
+}
+
+.service .box .fa-heart:hover,
+.service .box .fa-eye:hover {
+    background: orangered;
+    color: #fff;
+}
+
+.service .box .fa-heart {
+    right: -15rem;
+}
+
+.service .box .fa-eye {
+    left: -15rem;
+}
+
+.service .box:hover .fa-heart {
+    right: 1.5rem;
+}
+
+.service .box:hover .fa-eye {
+    left: 1.5rem;
+}
+
+.service .box img {
+    height: 16rem;
+    margin: -3rem -23px;
+}
+
+.service .box h3 {
+    position: relative;
+    top: 56px;
+    color: orangered;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.service .box .stars {
+    padding: 0.5rem 1rem;
+    position: relative;
+    top: 55px;
+}
+
+.service .box .stars i {
+    font-size: 1rem;
+    color: orangered;
+}
+
+.service .box span {
+    color: orangered;
+    font-weight: bolder;
+    margin-right: 1rem;
+    font-size: -1.5rem;
+    position: relative;
+    top: 21px;
+    left: 10px;
+}
+
+.service .box h6 {
+    position: relative;
+    top: 6px;
+    left: 1px;
+}
+
+.service .box .btn {
+    position: relative;
+    top: 5px;
+    left: 4px;
+}
+
+/* Service Section End */
+
+
+/* Discount Section Start */
+
+.discount {
+    background-color: #000;
+    color: #ebe4e4;
+    position: relative;
+}
+
+.discount-content:after {
+    content: "";
+    background-color: #000;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    height: 20px;
+    width: 20px;
+    display: block;
+    transform: translate(-50%,0);
+    transform: rotate(135deg);
+}
+
+.discount-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0;
+
+}
+
+.disc-content h2 {
+    font-weight: 600;
+    font-size: 45px;
+}
+
+.disc-content .btn {
+    color: #ebe4e4;
+}
+
+.disc-content .btn:hover {
+    color: #ff4500;
+}
+
+.registration {
+    background-color: #ebe4e4;
+    padding: 20px 0;
+}
+
+/* Discount Section End */
+
+
+/* Register Section Start */
+
+.register-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.reg-content {
+    letter-spacing: 2px;
+}
+
+/* Register Section End */
+
+
+/* Special Section Start */
+
+.speciality {
+    background: linear-gradient(rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.404)), url(../images/speciality.jpg) no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 500px;
+}
+
+.special-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f54e12;
+}
+
+.spec-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: #ebe4e4;
+    height: 250px;
+    position: relative;
+    top: -50px;
+}
+
+.spec-content i {
+    font-size: 35px;
+    padding: 40px;
+    border-radius: 50%;
+    color: #ff4500;
+    background-color: #ebe4e4;
+    margin-bottom: 30px;
+    box-shadow: 0px 1px 5px 1px rgba(128, 128, 128, 0.301);
+}
+
+.spec-content h3 {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.spec-content p {
+    font-size: 14px;
+}
+
+/* Special Section End */
+
+
+/* Location Section Start */
+
+.location {
+    background-color: #f8f6f3;
+    height: 1150px;
+}
+
+.location .heading {
+    padding: 150px 0px 40px 0;
+}
+
+.location .heading:before {
+    content: "";
+    background-color: #ff4500;
+    height: 4px;
+    width: 20px;
+    position: relative;
+    left: -210px;
+    top: 82px;
+}
+
+.location-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 30px 0;
+
+}
+
+.loc-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin: 5px 10px;
+
+}
+
+.loc-content img {
+    height: 450px;
+    width: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px 2px grey;
+    margin-bottom: 40px;
+}
+
+
+
+.loc-content i {
+    font-size: 25px;
+    color: #ff4500;
+    padding: 5px;
+    line-height: 40px;
+}
+
+.loc-content p {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* Location Section End */
+
+/* Hyperlink Section Start */
+
+.hyperlink {
+    background-color: #ebe4e4;
+    position: relative;
+    height: 400px;
+    padding: 30px 0;
+}
+
+.hyp-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    text-align: top-left;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.hyp-logo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.hyp-logo h1 {
+    font-size: 50px;
+}
+
+.btn {
+    margin-top: 5px;
+}
+
+.btn a {
+    text-decoration: none;
+}
+
+.btn i {
+    box-shadow: 0px 1px 3px 0px grey;
+    color: orangered;
+    background-color: #f8f6f3;
+    border-radius: 50%;
+    padding: 12px;
+    margin-right: 10px;
+    font-size: 18px;
+    transition: 0.8s;
+}
+
+.btn i:hover {
+    color: #f8f6f3;
+    background-color: orangered;
+    box-shadow: 0 0 0 0;
+}
+
+
+.categories h5 {
+    font-weight: bold;
+}
+
+.categories h5:before {
+    content: "";
+    background-color: #ff4500;
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    top: 4px;
+    left: -20px;
+    animation-name: round;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes round {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+
+}
+
+.categories li {
+    list-style: none;
+}
+
+.categories li a {
+    line-height: 35px;
+    color: #000;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.categories li a:hover {
+    color: orangered;
+}
+
+.hyp-links h5 {
+    font-weight: bold;
+}
+
+.hyp-links h5:before {
+    content: "";
+    background-color: #ff4500;
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    top: 4px;
+    left: -20px;
+    animation-name: round;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.hyp-links li {
+    list-style: none;
+}
+
+.hyp-links li a {
+    line-height: 35px;
+    color: #000;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.hyp-links li a.active {
+    color: orangered;
+}
+
+.hyp-links li a:hover {
+    color: orangered;
+}
+
+/* Hyperlink Section End */
+
+
+/* Footer Section Start */
+
+.footer {
+    background-color: #f8f6f3;
+}
+
+.footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+
+.footer b {
+    color: orangered;
+}
+
+.footer span {
+    font-family: 'Kaushan Script', cursive;
+}
+
+/* Footer Section End */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive code start */
+@media screen and (max-width: 1250px) {
+    .wrapper nav {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    nav .content .links {
+        margin-left: 30px;
+    }
+
+    .content .links li a {
+        padding: 8px 13px;
+    }
+
+    .wrapper .search-box {
+        max-width: calc(100% - 100px);
+    }
+
+    .wrapper .search-box input {
+        padding: 0 100px 0 15px;
+    }
+
+    .home .content h4 {
+        font-size: 30px;
+    }
+
+    .home .content h1 {
+        font-size: 90px;
+    }
+
+    .service {
+        height: 900px;
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .service {
+        height:1250px;
+    }
+
+    .location {
+        height: 1700px;
+    }
+
+    .loc-content {
+        margin-bottom: 80px;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 990px) {
+    .home-content {
+        width: 120%;
+    }
+
+    .home .content{
+        position: relative;
+        left: -50px;
+    }
+
+    .home .content h4 {
+        font-size: 25px;
+    }
+
+    .home .content h1 {
+        font-size: 70px;
+    }
+
+    .disc-content h2 {
+        font-size: 30px;
+    }
+
+    .reg-content h4 {
+        font-size: 18px;
+    }
+
+
+    .hyp-logo h1 {
+        font-size: 30px;
+    }
+
+    .heading:before {
+            position: relative;
+            left: -134px;
+            top: 65px;
+    }
+
+    .service .heading h3 {
+        font-size: 30px;
+    }
+
+    .service .heading h2 {
+        font-size: 30px;
+    }
+
+    .service .box h6 {
+        font-size: 13px;
+        top: 15px;
+    }
+
+    .service .box .stars {
+        font-size: 6px;
+    }
+
+    .service .box span {
+        font-size: 14px;
+    }
+
+    .discount-content:after {
+        width: 15px;
+        height: 15px;
+        bottom: -4px;
+    }
+
+    .disc-content h2 {
+        font-size: 22px;
+        letter-spacing: 1px;
+    }
+
+    .disc-content .btn {
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+
+    .reg-content h4 {
+        font-size: 15px;
+    }
+
+
+    .location .heading:before {
+        left: -158px;
+        top: 65px;
+        }
+    .location .heading h3 {
+        font-size: 30px;
+        }
+
+    .location .heading h2 {
+    font-size: 30px;
+    }
+
+    .loc-content p {
+        font-size: 14px;
+    }
+
+    .categories h5, .hyp-links h5 {
+        font-size: 15px;
+    }
+
+    .categories h5:before,
+    .hyp-links h5:before {
+        width: 12px;
+        height: 12px;
+    }
+
+    .categories li a,
+    .hyp-links li a {
+        font-size: 13px;
+    }
+
+    .hyp-logo .btn i{
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .footer-left {
+        font-size: 12px;
+    }
+
+    .footer-right {
+        font-size: 12px;
+    }
+}
+
+
+@media screen and (max-width: 960px) {
+    .home-content {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width: 900px) {
+    .wrapper .menu-icon {
+        display: block;
+        position: absolute;
+        left: -360px;
+    }
+
+    .search-box input {
+        width: 500px;
+        position: absolute;
+        left: -200px;
+    }
+
+    .wrapper .search-icon {
+        display: block;
+        position: absolute;
+        right: -360px;
+    }
+
+    .search-box .go-icon {
+        position: absolute;
+        right: -250px;
+        top: 32px;
+    }
+
+    .wrapper {
+        position: relative;
+    }
+
+    .wrapper .logo {
+        position: absolute;
+    }
+
+    .wrapper .logo a {
+        font-size: 18px;
+    }
+
+    .wrapper #show-menu:checked~.menu-icon i::before {
+        content: "\f00d";
+    }
+
+    nav .content .links {
+        display: block;
+        position: fixed;
+        background: #f8f6f3;
+        height: 100%;
+        width: 100%;
+        top: 70px;
+        left: -100%;
+        margin-left: 0;
+        max-width: 350px;
+        overflow-y: auto;
+        padding-bottom: 100px;
+        transition: all 0.3s ease;
+        z-index: 1;
+    }
+
+    nav #show-menu:checked~.content .links {
+        left: 0%;
+    }
+
+    .content .links li {
+        margin: 15px 20px;
+    }
+
+    .content .links li a,
+    .content .links li label {
+        line-height: 40px;
+        font-size: 20px;
+        display: block;
+        padding: 8px 18px;
+        cursor: pointer;
+    }
+
+    .content .links li a.desktop-link {
+        display: none;
+    }
+
+    /* dropdown responsive code start */
+    .content .links ul,
+    .content .links ul ul {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        background: none;
+        max-height: 0px;
+        overflow: hidden;
+    }
+
+    .content .links #show-features:checked~ul,
+    .content .links #show-services:checked~ul,
+    .content .links #show-items:checked~ul {
+        max-height: 100vh;
+    }
+
+    .content .links ul li {
+        margin: 7px 20px;
+    }
+
+    .content .links ul li a {
+        font-size: 18px;
+        line-height: 30px;
+        border-radius: 5px !important;
+    }
+
+    .content .links li a,
+    .content .links li label {
+        color: #000;
+        font-size: 16px;
+        text-decoration: none;
+        padding: 0px 17px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        max-height: 20px;
+    }
+
+    .content .links ul li a,
+    .content .links ul ul li a {
+        visibility: visible;
+        max-height: 20px;
+        font-size: 16px;
+    }
+
+
+
+    .home-content {
+        width: 100%;
+    }
+
+    .secondary-heading img {
+        height: 140px;
+    }   
+
+    ::placeholder {
+        font-size: 11px;
+    }
+}
+
+
+
+@media screen and (max-width: 764px) {
+    .wrapper .menu-icon {
+        display: block;
+        position: absolute;
+        left: -300px;
+    }
+
+    .search-box input {
+        width: 450px;
+        position: absolute;
+        left: -200px;
+    }
+
+    .wrapper .search-icon {
+        display: block;
+        position: absolute;
+        right: -300px;
+    }
+
+    .search-box .go-icon {
+        position: absolute;
+        right: -250px;
+    }
+
+    .wrapper {
+        position: relative;
+    }
+
+    .wrapper .logo {
+        position: absolute;
+    }
+
+    .wrapper .logo a {
+        font-size: 22px;
+    }
+
+    ::placeholder {
+        font-size: 14px;
+    }
+
+    .content .links li a,
+    .content .links li label {
+        color: #000;
+        font-size: 16px;
+        text-decoration: none;
+        padding: 0px 17px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        max-height: 20px;
+    }
+
+    .content .links ul li a,
+    .content .links ul ul li a {
+        visibility: visible;
+        max-height: 20px;
+        font-size: 16px;
+    }
+
+
+    .home {
+        height: 800px;
+    }
+    .home-content {
+        width: 100%;
+        background-position: center;
+        position: relative;
+        top: -150px;
+        align-items: flex-end;
+        height: 500px;
+
+    }
+
+    .home .content{
+        position: relative;
+        bottom: -180px;
+        left: 00px;
+    }
+
+    .home .content h4 {
+        font-size: 22px;
+    }
+
+    .home .content h1 {
+        font-size: 60px;
+    }
+
+
+    .service {
+        height: 2100px;
+    }
+
+    .service .box {
+        height: 420px;
+    }
+
+    .service .box h6 {
+        top: 10px;
+    }
+
+    .service .box .stars {
+        top: 64px;
+    }
+
+    .service .box .btn {
+        top: 15px;
+        left: -52px;
+    }
+
+    .service .box span {
+        top: 41px;
+        left: 61px;
+    }
+
+
+
+
+    .disc-content h2 {
+        font-size: 25px;
+    }
+
+    .disc-content a {
+        font-size: 20px;
+    }
+
+
+
+
+
+    .reg-content h4 {
+        font-size: 15px;
+    }
+
+
+    .spec-content i {
+        font-size: 25px;
+        padding: 30px;
+    }
+
+    .spec-content h3 {
+        margin-bottom: 20px;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    
+    .spec-content p {
+        font-size: 10px;
+    }
+
+
+
+
+    .location {
+        height: 2400px;
+    }
+
+    .location .heading:before {
+        left: -176px;
+        top: 74px;
+    }
+
+    .location .heading h3 {
+        font-size: 35px;
+        font-weight: 900;
+    }
+    
+    .location .heading h2 {
+        font-weight: bold;
+        font-size: 35px;
+        color: orangered;
+    }
+
+
+    .hyperlink {
+        height: 1000px;
+    }
+
+    .hyp-logo {
+        margin-bottom: 80px;
+        align-items: center;
+    }
+
+    .hyp-logo h1 {
+        font-size: 50px;
+    }
+
+    .categories, .hyp-links {
+        margin-bottom: 80px;
+        padding: 10px 30px;
+    }
+
+    .categories h5,
+    .hyp-links h5 {
+        font-size: 20px;
+    }
+
+    .categories h5:before,
+    .hyp-links h5:before {
+        top: 13px;
+        left: 15px;
+    }
+
+    .categories li a,
+    .hyp-links li a {
+        font-size: 15px;
+    }
+
+    .btn i {
+        font-size: 15px;
+    }
+
+
+    .footer-left {
+        font-size: 13px;
+    }
+
+    .footer-right {
+        font-size: 13px;
+    }
+    
+
+    .secondary-heading img {
+        position: relative;
+        top: -50px;
+        height: 140px;
+}
+
+
+
+
+
+@media screen and (max-width: 640px) {
+    .wrapper .menu-icon {
+        display: block;
+        position: absolute;
+        left: -260px;
+    }
+
+    .search-box input {
+        width: 300px;
+        position: absolute;
+        left: -150px;
+    }
+
+    .wrapper .search-icon {
+        display: block;
+        position: absolute;
+        right: -260px;
+    }
+
+    .search-box .go-icon {
+        position: absolute;
+        right: -200px;
+    }
+
+    ::placeholder {
+        font-size: 14px;
+    }
+
+    .wrapper {
+        position: relative;
+    }
+
+    .wrapper .logo {
+        position: absolute;
+    }
+
+    .wrapper .logo a {
+        font-size: 22px;
+    }
+
+    .content .links li a,
+    .content .links li label {
+        color: #000;
+        font-size: 15px;
+        text-decoration: none;
+        padding: 0px 17px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        max-height: 20px;
+    }
+
+    .content .links ul li a,
+    .content .links ul ul li a {
+        visibility: visible;
+        max-height: 20px;
+        font-size: 15px;
+    }
+
+    .disc-content h2 {
+        font-size: 23px;
+    }
+
+    .disc-content a {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .wrapper .menu-icon {
+        display: block;
+        position: absolute;
+        left: -230px;
+    }
+
+    .search-box input {
+        width: 300px;
+        position: absolute;
+        left: -150px;
+    }
+
+    ::placeholder {
+        font-size: 12px;
+    }
+
+    .wrapper .search-icon {
+        display: block;
+        position: absolute;
+        right: -230px;
+    }
+
+    .search-box .go-icon {
+        position: absolute;
+        right: -200px;
+    }
+
+    .wrapper {
+        position: relative;
+    }
+
+    .wrapper .logo {
+        position: absolute;
+    }
+
+    .wrapper .logo a {
+        font-size: 22px;
+    }
+
+    .content .links li a,
+    .content .links li label {
+        color: #000;
+        font-size: 15px;
+        text-decoration: none;
+        padding: 0px 17px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        max-height: 20px;
+    }
+
+    .content .links ul li a,
+    .content .links ul ul li a {
+        visibility: visible;
+        max-height: 20px;
+        font-size: 15px;
+    }
+
+    .home .content h4 {
+        font-size: 20px;
+    }
+
+    .home .content h1 {
+        font-size: 55px;
+    }
+
+
+    .disc-content h2 {
+        font-size: 20px;
+    }
+
+    .disc-content a {
+        font-size: 16px;
+    }
+
+
+    .reg-content h4 {
+        font-size: 13px;
+    }
+
+    .spec-content i {
+        font-size: 25px;
+        padding: 30px;
+    }
+
+    .spec-content h3 {
+        margin-bottom: 20px;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    
+    .spec-content p {
+        font-size: 8px;
+    }
+
+
+
+    .hyp-logo h1 {
+        font-size: 40px;
+    }
+
+    .categories h5:before,
+    .hyp-links h5:before {
+        top: 13px;
+        left: 15px;
+    }
+
+    .btn i {
+        font-size: 13px;
+    }
+
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-left {
+        font-size: 11px;
+    }
+
+    .footer-right {
+        font-size: 11px;
+    }
+
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+    .wrapper .menu-icon {
+        display: block;
+        position: absolute;
+        left: -200px;
+    }
+
+    .search-box input {
+        width: 300px;
+        position: absolute;
+        left: -150px;
+    }
+
+    ::placeholder {
+        font-size: 11px;
+    }
+
+    .wrapper .search-icon {
+        display: block;
+        position: absolute;
+        right: -200px;
+    }
+
+    .search-box .go-icon {
+        position: absolute;
+        right: -160px;
+    }
+
+    .wrapper {
+        position: relative;
+    }
+
+    .wrapper .logo {
+        position: absolute;
+    }
+
+    .wrapper .logo a {
+        font-size: 18px;
+    }
+
+    .content .links li a,
+    .content .links li label {
+        color: #000;
+        font-size: 15px;
+        text-decoration: none;
+        padding: 0px 17px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        max-height: 20px;
+    }
+
+    .content .links ul li a,
+    .content .links ul ul li a {
+        visibility: visible;
+        max-height: 20px;
+        font-size: 15px;
+    }
+
+
+    .reg-content h4 {
+        font-size: 11px;
+    }
+
+}
+
+
+@media screen and (max-width: 440px) {
+    .wrapper .menu-icon {
+        display: block;
+        position: absolute;
+        left: -180px;
+    }
+
+    .search-box input {
+        width: 300px;
+        position: absolute;
+        left: -190px;
+        top: -5px;
+    }
+
+    ::placeholder {
+        font-size: 10px;
+    }
+
+    .wrapper .search-icon {
+        display: block;
+        position: absolute;
+        right: -180px;
+    }
+
+    .search-box .go-icon {
+        position: absolute;
+        right: -150px;
+        top: 32px;
+    }
+
+    .wrapper {
+        position: relative;
+    }
+
+    .wrapper .logo {
+        position: absolute;
+    }
+
+    .wrapper .logo a {
+        font-size: 16px;
+    }
+
+    .content .links li a,
+    .content .links li label {
+        color: #000;
+        font-size: 14px;
+        text-decoration: none;
+        padding: 0px 17px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        max-height: 20px;
+    }
+
+    .content .links ul li a,
+    .content .links ul ul li a {
+        visibility: visible;
+        max-height: 20px;
+        font-size: 14px;
+    }
+
+    .home .content h4 {
+        font-size: 17px;
+    }
+
+    .home .content h1 {
+        font-size: 45px;
+    }
+
+
+
+    .location .heading:before {
+        left: -130px;
+        top: 56px;
+    }
+
+    .location .heading h3 {
+        font-size: 25px;
+    }
+    
+    .location .heading h2 {
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+
+    .hyp-logo h1 {
+        font-size: 30px;
+    }
+
+    .btn i {
+        font-size: 12px;
+    }
+
+
+}
+
+
+
+
+
+
+@media screen and (max-width: 400px) {
+    .wrapper nav {
+        padding: 0 10px;
+    }
+
+    .wrapper .menu-icon {
+        display: block;
+        position: absolute;
+        left: -150px;
+        font-size: 14px;
+    }
+
+    .search-box input {
+        width: 300px;
+        position: absolute;
+        left: -190px;
+        top: -5px;
+    }
+
+    ::placeholder {
+        font-size: 10px;
+    }
+
+    .wrapper .search-icon {
+        display: block;
+        position: absolute;
+        right: -150px;
+        font-size: 14px;
+    }
+
+    .search-box .go-icon {
+        position: absolute;
+        right: -100px;
+        top: 32px;
+        font-size: 15px;
+    }
+
+    .wrapper {
+        position: relative;
+    }
+
+    .wrapper .logo {
+        position: absolute;
+    }
+
+    .wrapper .logo a {
+        font-size: 14px;
+    }
+
+    .content .links li a,
+    .content .links li label {
+        color: #000;
+        font-size: 13px;
+        text-decoration: none;
+        padding: 0px 17px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        max-height: 20px;
+    }
+
+    .content .links ul li a,
+    .content .links ul ul li a {
+        visibility: visible;
+        max-height: 20px;
+        font-size: 13px;
+    }
+
+
+    .disc-content h2 {
+        font-size: 18px;
+    }
+
+    .disc-content a {
+        font-size: 14px;
+    }
+
+
+
+    .reg-content h4 {
+        font-size: 8px;
+    }
+
+
+    .spec-content i {
+        font-size: 20px;
+        padding: 25px;
+    }
+
+
+    .loc-content img {
+        height: 400px;
+        width: 270px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .footer-left {
+        font-size: 9px;
+    }
+
+    .footer-right {
+        font-size: 9px;
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 330px) {
+    .wrapper nav {
+        padding: 0 10px;
+    }
+
+    .wrapper .menu-icon {
+        display: block;
+        position: absolute;
+        left: -130px;
+        font-size: 14px;
+    }
+
+    .search-box input {
+        width: 240px;
+        position: absolute;
+        left: -120px;
+        top: -5px;
+    }
+
+    ::placeholder {
+        font-size: 10px;
+    }
+
+    .wrapper .search-icon {
+        display: block;
+        position: absolute;
+        right: -130px;
+        font-size: 14px;
+    }
+
+    .search-box .go-icon {
+        position: absolute;
+        right: -120px;
+        top: 32px;
+        font-size: 15px;
+    }
+
+    .wrapper {
+        position: relative;
+    }
+
+    .wrapper .logo {
+        position: absolute;
+    }
+
+    .wrapper .logo a {
+        font-size: 12px;
+    }
+
+    .content .links li a,
+    .content .links li label {
+        color: #000;
+        font-size: 12px;
+        text-decoration: none;
+        padding: 0px 17px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        max-height: 20px;
+    }
+
+    .content .links ul li a,
+    .content .links ul ul li a {
+        visibility: visible;
+        max-height: 20px;
+        font-size: 12px;
+    }
+
+    .home .content h4 {
+        font-size: 15px;
+    }
+
+    .home .content h1 {
+        font-size: 38px;
+    }
+
+    .home .content h6 {
+        font-size: 13px;
+    }
+
+
+    .disc-content h2 {
+        font-size: 15px;
+    }
+
+    .disc-content a {
+        font-size: 12px;
+    }
+
+    .reg-content h4 {
+        font-size: 5px;
+    }
+
+    .spec-content i {
+        font-size: 17px;
+        padding: 20px;
+    }
+
+    .spec-content h3 {
+        font-size: 12px;
+    }
+
+    .spec-content p {
+        font-size: 7px;
+    }
+
+
+    .location .heading:before {
+        left: -108px;
+        top: 46px;
+        width: 15px;
+    }
+
+    .location .heading h3 {
+        font-size: 20px;
+    }
+    
+    .location .heading h2 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .heading:before {
+        left: -90px;
+        width: 12px;
+        height: 3px;
+        top:45px;
+    }
+
+    .service .heading h2 {
+        font-size: 20px;
+    }
+
+    .service .heading h3 {
+        font-size: 20px;
+    }
+}
+
+
+
+
+@media screen and (max-width: 280px) {
+    .wrapper nav {
+        padding: 0 10px;
+    }
+
+    .wrapper .menu-icon {
+        display: block;
+        position: absolute;
+        left: -130px;
+        font-size: 10px;
+    }
+
+    .search-box input {
+        width: 200px;
+        position: absolute;
+        left: -120px;
+        top: -5px;
+    }
+
+    ::placeholder {
+        font-size: 7px;
+    }
+
+    .wrapper .search-icon {
+        display: block;
+        position: absolute;
+        right: -130px;
+        font-size: 10px;
+    }
+
+    .search-box .go-icon {
+        position: absolute;
+        right: -80px;
+        top: 32px;
+        font-size: 10px;
+    }
+
+    .wrapper {
+        position: relative;
+    }
+
+    .wrapper .logo {
+        position: absolute;
+    }
+
+    .wrapper .logo a {
+        font-size: 12px;
+
+    }
+
+    .content .links li a,
+    .content .links li label {
+        color: #000;
+        font-size: 10px;
+        text-decoration: none;
+        padding: 0px 17px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        max-height: 20px;
+    }
+
+    .content .links ul li a,
+    .content .links ul ul li a {
+        visibility: visible;
+        max-height: 20px;
+        font-size: 10px;
+    }
+
+
+
+
+
+
+    .disc-content h2 {
+        font-size: 12px;
+    }
+
+    .disc-content a {
+        font-size: 10px;
+    }
+
+
+    .spec-content i {
+        font-size: 14px;
+        padding: 20px;
+    }
+
+    .spec-content h3 {
+        font-size: 10px;
+    }
+
+    .spec-content p {
+        font-size: 6px;
+    }
+
+
+
+    .loc-content img {
+        height: 350px;
+        width: 250px;
+    }
+
+}
